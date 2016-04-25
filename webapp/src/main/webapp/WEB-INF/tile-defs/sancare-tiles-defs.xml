@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN" "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+
+<tiles-definitions>
+    <definition name="layout" template="/WEB-INF/views/tiles/layout.jsp">
+        <put-attribute name="title" value="Sancare" />
+        <put-attribute name="header" value="/WEB-INF/views/tiles/sancare/header.jsp" />
+        <put-attribute name="menu" value="/WEB-INF/views/tiles/sancare/menu.jsp" />
+        <put-attribute name="body" value="/WEB-INF/views/tiles/sancare/index.jsp" />
+        <put-attribute name="footer" value="/WEB-INF/views/tiles/sancare/footer.jsp" />
+    </definition>
+    
+    <definition name="loginPage" extends="layout">
+		<put-attribute name="body" type="template" value="/WEB-INF/views/tiles/login.jsp" />
+	</definition>
+	
+	<definition name="errorPage" extends="layout">
+		<put-attribute name="pageTitle" type="string" value=""/>
+		<put-attribute name="body" type="template" value="/WEB-INF/views/tiles/error/error.jsp"/>
+	</definition>
+    
+    <definition name="mainPanel" extends="layout">
+		<put-attribute name="body" type="template" value="/WEB-INF/views/tiles/sancare/mainpanel.jsp" />
+	</definition>
+	
+	<definition name="schemeView" extends="layout">
+		<put-attribute name="body" type="template" value="/WEB-INF/views/tiles/sancare/scheme/view.jsp" />
+	</definition>
+	<definition name="schemeAdd" extends="layout">
+		<put-attribute name="body" type="template" value="/WEB-INF/views/tiles/sancare/scheme/form.jsp" />
+	</definition>
+	
+	<definition name="claimView" extends="layout">
+		<put-attribute name="body" type="template" value="/WEB-INF/views/tiles/sancare/claim/view.jsp" />
+	</definition>
+	<definition name="claimAdd" extends="layout">
+		<put-attribute name="body" type="template" value="/WEB-INF/views/tiles/sancare/claim/form.jsp" />
+	</definition>
+	
+	<definition name="clientView" extends="layout">
+		<put-attribute name="body" type="template" value="/WEB-INF/views/tiles/sancare/client/view.jsp" />
+	</definition>
+	<definition name="clientAdd" extends="layout">
+		<put-attribute name="body" type="template" value="/WEB-INF/views/tiles/sancare/client/form.jsp" />
+	</definition>
+	
+	<definition name="beneficiaryView" extends="layout">
+		<put-attribute name="body" type="template" value="/WEB-INF/views/tiles/sancare/client/beneficiary/view.jsp" />
+	</definition>
+	<definition name="beneficiaryAdd" extends="layout">
+		<put-attribute name="body" type="template" value="/WEB-INF/views/tiles/sancare/client/beneficiary/form.jsp" />
+	</definition>
+	
+	<definition name="tipView" extends="layout">
+		<put-attribute name="body" type="template" value="/WEB-INF/views/tiles/sancare/tip/view.jsp" />
+	</definition>
+	<definition name="tipAdd" extends="layout">
+		<put-attribute name="body" type="template" value="/WEB-INF/views/tiles/sancare/tip/form.jsp" />
+	</definition>
+	
+	<definition name="townView" extends="layout">
+		<put-attribute name="body" type="template" value="/WEB-INF/views/tiles/sancare/town/view.jsp" />
+	</definition>
+	<definition name="townAdd" extends="layout">
+		<put-attribute name="body" type="template" value="/WEB-INF/views/tiles/sancare/town/form.jsp" />
+	</definition>
+	
+	<definition name="hospitalView" extends="layout">
+		<put-attribute name="body" type="template" value="/WEB-INF/views/tiles/sancare/town/hospital/view.jsp" />
+	</definition>
+	<definition name="hospitalAdd" extends="layout">
+		<put-attribute name="body" type="template" value="/WEB-INF/views/tiles/sancare/town/hospital/form.jsp" />
+	</definition>
+	
+	<definition name="activityView" extends="layout">
+		<put-attribute name="body" type="template" value="/WEB-INF/views/tiles/sancare/town/hospital/activity/view.jsp" />
+	</definition>
+	<definition name="activityAdd" extends="layout">
+		<put-attribute name="body" type="template" value="/WEB-INF/views/tiles/sancare/town/hospital/activity/form.jsp" />
+	</definition>
+	
+	<definition name="queryView" extends="layout">
+		<put-attribute name="body" type="template" value="/WEB-INF/views/tiles/sancare/query/view.jsp" />
+	</definition>
+	<definition name="queryAdd" extends="layout">
+		<put-attribute name="body" type="template" value="/WEB-INF/views/tiles/sancare/query/form.jsp" />
+	</definition>
+	
+	<definition name="userView" extends="layout">
+		<put-attribute name="body" type="template" value="/WEB-INF/views/tiles/sancare/hr/view.jsp" />
+	</definition>
+	<definition name="userAdd" extends="layout">
+		<put-attribute name="body" type="template" value="/WEB-INF/views/tiles/sancare/hr/form.jsp" />
+	</definition>
+ 
+</tiles-definitions>

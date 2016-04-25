@@ -1,0 +1,209 @@
+<?xml version="1.0"?>
+<project
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>za.co.sanlam</groupId>
+		<artifactId>sancare</artifactId>
+		<version>1.0-SNAPSHOT</version>
+	</parent>
+	<!-- <groupId>com.smsmedia.co.ug</groupId> -->
+	<artifactId>server</artifactId>
+	<packaging>jar</packaging>
+	<name>server</name>
+	<dependencies>
+		<dependency>
+			<groupId>za.co.sanlam</groupId>
+			<artifactId>model</artifactId>
+			<version>1.0-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>3.8.1</version>
+			<scope>test</scope>
+		</dependency>
+
+		<!-- SPRING DEPENDENCIES -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-core</artifactId>
+			<version>3.2.5.RELEASE</version>
+			<type>jar</type>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+			<version>3.2.5.RELEASE</version>
+			<type>jar</type>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context-support</artifactId>
+			<version>3.2.5.RELEASE</version>
+			<type>jar</type>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-orm</artifactId>
+			<version>3.2.5.RELEASE</version>
+		</dependency>
+
+		<!-- SPRING SECURITY -->
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-core</artifactId>
+			<version>3.2.5.RELEASE</version>
+			<type>jar</type>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-config</artifactId>
+			<version>3.2.5.RELEASE</version>
+		</dependency>
+
+		<!-- GENERIC DAO SUPPORT -->
+		<dependency>
+			<groupId>com.googlecode.genericdao</groupId>
+			<artifactId>dao</artifactId>
+			<version>1.1.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.googlecode.genericdao</groupId>
+			<artifactId>dao-hibernate</artifactId>
+			<version>1.0.0</version>
+			<exclusions>
+				<exclusion>
+					<groupId>javax.persistence</groupId>
+					<artifactId>persistence-api</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>com.googlecode.genericdao</groupId>
+			<artifactId>search</artifactId>
+			<version>1.1.0</version>
+			<exclusions>
+				<exclusion>
+					<groupId>javax.persistence</groupId>
+					<artifactId>persistence-api</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+		<!-- HIBERNATE CACHING SUPPORT DEPENDENCY -->
+		<dependency>
+			<groupId>net.sf.ehcache</groupId>
+			<artifactId>ehcache-core</artifactId>
+			<version>2.3.1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>javassist</groupId>
+			<artifactId>javassist</artifactId>
+			<version>3.4.GA</version>
+		</dependency>
+
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>servlet-api</artifactId>
+			<version>2.5</version>
+		</dependency>
+
+		<!-- LIQUIBASE CONFIGURATIONS -->
+		<!--<dependency> <groupId>org.liquibase</groupId> <artifactId>liquibase-core</artifactId> 
+			<version>1.9.5</version> <exclusions> <exclusion> <groupId>org.slf4j</groupId> 
+			<artifactId>slf4j-api</artifactId> </exclusion> </exclusions> </dependency> 
+			<dependency> <groupId>org.liquibase.ext</groupId> <artifactId>liquibase-hibernate</artifactId> 
+			<version>2.0.0</version> </dependency> -->
+
+		<!-- HIBERNATE CONNECTION POOLING DEPENDENCY -->
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-c3p0</artifactId>
+			<version>3.5.6-Final</version>
+		</dependency>
+
+		<dependency>
+			<groupId>cglib</groupId>
+			<artifactId>cglib</artifactId>
+			<version>2.2.2</version>
+		</dependency>
+
+		<!-- MySQL database driver -->
+		<!-- <dependency> <groupId>mysql</groupId> <artifactId>mysql-connector-java</artifactId> 
+			<version>5.1.9</version> </dependency> -->
+
+		<!-- PostgreSQL CONNECTOR -->
+		<dependency>
+			<groupId>postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+			<version>9.1-901.jdbc4</version>
+		</dependency>
+
+		<!-- ASPECTJ -->
+		<dependency>
+			<groupId>org.aspectj</groupId>
+			<artifactId>aspectjtools</artifactId>
+			<version>1.6.2</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-entitymanager</artifactId>
+			<version>3.5.6-Final</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-log4j12</artifactId>
+			<version>1.6.1</version>
+		</dependency>
+	</dependencies>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-antrun-plugin</artifactId>
+				<version>1.8</version>
+				<executions>
+					<execution>
+						<id>compile</id>
+						<!-- <phase>compile</phase> -->
+						<goals>
+							<goal>run</goal>
+						</goals>
+					</execution>
+				</executions>
+				<!-- <configuration> <target> <tasks> <property name="compile_classpath" 
+					refid="maven.compile.classpath" /> </tasks> <databaseConfigLog driver="com.mysql.jdbc.Driver" 
+					url="jdbc:mysql://localhost:3306/sancare_test" username="root" password="root" 
+					baseUrl="hibernate:hibernate.cfg.xml" classpathref="maven.compile.classpath" 
+					> </databaseConfigLog> </target> </configuration> -->
+				<!-- <configuration> <target> <taskdef resource="liquibasetasks.properties"> 
+					<classpath refid="maven.compile.classpath" /> </taskdef> <diffDatabaseToChangeLog 
+					driver="org.postgresql.Driver" url="jdbc:mysql://localhost:3306/sancare_test" 
+					username="root" password="root" baseUrl="hibernate:hibernate.cfg.xml" outputFile="${basedir}/src/main/resources/Generated-Changelog.xml" 
+					classpathref="maven.compile.classpath"> </diffDatabaseToChangeLog> </target> 
+					</configuration> -->
+				<configuration>
+					<!-- <changeLogFile>com.mysql.jdbc.Driver</changeLogFile> <driver>oracle.jdbc.driver.OracleDriver</driver> 
+						<url>jdbc:mysql://localhost:3306/sancare_test</url> <username>root</username> 
+						<password>root</password> -->
+
+					<changeLogFile>org.postgresql.Driver</changeLogFile>
+					<driver>oracle.jdbc.driver.OracleDriver</driver>
+					<url>jdbc:postgresql://localhost:5432/sancare_test</url>
+					<username>postgres</username>
+					<password>root</password>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<version>2.6</version>
+			</plugin>
+		</plugins>
+	</build>
+</project>

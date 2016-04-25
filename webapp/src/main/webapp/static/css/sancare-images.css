@@ -1,0 +1,38 @@
+span.complaint-icon {
+	background-image: url("../images/add_me.png");
+	width: 32px;
+	height: 32px;
+}
+
+span.query-icon {
+	background-image: url("../images/query.png");
+	width: 32px;
+	height: 32px;
+}
+
+span.statement-icon {
+	background-image: url("../images/statement.png");
+	width: 32px;
+	height: 32px;
+}
+
+span.policy-icon {
+	background-image: url("../images/policy.png");
+	width: 32px;
+	height: 32px;
+}
+
+span.tip-icon {
+	background-image: url("../images/health_tips.png");
+	width: 32px;
+	height: 32px;
+}
+
+span.panellink {
+  background-position: 50% center;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  height: 180px;
+  padding-top: 25px;
+  width: 180px;
+}

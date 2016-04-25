@@ -1,0 +1,138 @@
+@CHARSET "UTF-8";
+
+.hidden {
+	display: none !important;
+}
+
+.hide {
+	display: none !important;
+}
+
+.short {
+	width: 50px !important;
+	min-width: 50px !important;
+	max-width: 50px !important;
+}
+
+.vshort {
+	width: 40px !important;
+	min-width: 40px !important;
+	max-width: 40px !important;
+}
+
+.medium {
+	/*width: 100px !important;*/
+	min-width: 100px !important;
+	max-width: 100px !important;
+}
+
+.long {
+	width: 150px !important;
+	min-width: 150px !important;
+	max-width: 150px !important;
+}
+
+.long2 {
+	width: 200px !important;
+	min-width: 200px !important;
+	max-width: 200px !important;
+}
+
+.widthAuto {
+	width: auto !important;
+}
+
+.spaced2 {
+	margin-left: 10px;
+}
+
+.spaced {
+	margin-left: 5px;
+}
+
+.spacedRight2 {
+	margin-right: 10px;
+	padding-right: 10px;
+}
+
+.spacedRight {
+	margin-right: 5px;
+}
+
+.spacedLeft2 {
+	margin-left: 10px;
+	padding-left: 10px;
+}
+
+.spacedLeft {
+	margin-left: 5px;
+}
+
+.redText {
+	color: red !important;
+}
+
+.blackText {
+	color: black !important;
+}
+
+.right {
+	text-align: right !important;
+}
+
+.left {
+	text-align: left !important;
+}
+
+.center {
+	text-align: center !important;
+}
+
+.numberCell,.numCell {
+	padding-right: 10px !important;
+	text-align: right !important;
+}
+
+.paddingRight10px {
+	padding-right: 10px !important;
+}
+
+.borderBottom {
+	border-bottom: 1px solid #012456;
+}
+
+.borderTop {
+	border-top: 1px solid #012456;
+}
+
+.borderLeft {
+	border-left: 1px solid #012456;
+}
+
+.borderRight {
+	border-right: 1px solid #012456;
+}
+
+.bgRed {
+	background-color: red !important;
+}
+
+.bgGreen {
+	background-color: green !important;
+}
+
+.widthAuto {
+	width: auto !important;
+}
+
+.valignTop {
+	vertical-align: top;
+}
+
+.underline {
+	text-decoration: underline;
+}
+
+.italic {
+	font-style: italic;
+}
